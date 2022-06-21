@@ -8,17 +8,11 @@ mixin table()
                 th(scope="col") E-mail
                 th(scope="col") Address
             tbody
-                tr
-                    - var i = 0;
-                    //- for(let i = 0; i < data.length; i++)
-                    //- while i < data.length
-                        td=i++
-                    th(scope="row") #{i++}
-                    td #{data[i].fName}
-                    td #{data[i].lName}
-                    td #{data[i].email}
-                    td #{data[i].address}
-                //- - if(data.length){for(var i = 0; i < data.length; i++)}
-                //- tr
-                //-     th(scope="row") #{i++}
-                    //- td #{data.first_name}
+                each resident in data
+                    tr
+                    - let i =0;
+                        td #{i++}
+                        td= resident.fName
+                        td= resident.lName
+                        td= resident.email
+                        td= resident.address
