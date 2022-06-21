@@ -1,4 +1,9 @@
 extends index
 
+include ./main-nav
+
 block layout-content
-  h1 Welcome to #{title}
+  div(id="app" class="d-flex flex-column h-100")
+    +main-nav(activeRoute)
+    block content
+
