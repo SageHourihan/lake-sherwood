@@ -36,6 +36,12 @@ const config = {
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.oidc.isAuthenticated();
+  res.locals.activeRoute = req.originalUrl;
+  next();
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -44,8 +50,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// TODO: add authentication
 app.use('/boat_ramp', requiresAuth(), boatRampRouter)
+
+// login/logout
+app.get('/login/:page', (req, res) => {
+  const { page } = req.params;
+
+  res.oidc.login({
+    returnTo: page,
+  });
+});
+
+app.get('/logout/:page', (req, res) => {
+  const { page } = req.params;
+
+  res.oidc.logout({
+    returnTo: page,
+  });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

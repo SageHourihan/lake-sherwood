@@ -1,3 +1,5 @@
+include ./auth-nav
+
 mixin main-nav(activeRoute)
     nav(class="navbar navbar-expand-lg navbar-light  mb-5")
         div(class="container-fluid")
@@ -13,4 +15,4 @@ mixin main-nav(activeRoute)
                     a(class="nav-link" href="/boat_ramp") Boat Ramp Database
                     a(class="nav-link" href="#") Blog
                     a(class="nav-link" href="#") Contact
-                    a(class="nav-link" href="#") Apply for a loan
+                    +auth-nav(isAuthenticated)
