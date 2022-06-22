@@ -1,7 +1,7 @@
 mixin table()
-    table(class="table table-stripped mt-3")
+    table(class="table table-striped")
         thead
-            tr
+            tr(class='text-center')
                 th(scope="col") ID
                 th(scope="col") First Name
                 th(scope="col") Last Name
@@ -9,7 +9,7 @@ mixin table()
                 th(scope="col") Address
             tbody
                 each resident in data
-                    tr
+                    tr(class='text-center')
                         //- -var i = 0;
                         // TODO: Add unique ID
                         td unique ID
