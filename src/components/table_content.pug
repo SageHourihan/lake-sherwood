@@ -1,3 +1,5 @@
+// TODO: resize tabel
+// TODO: add search
 mixin table()
     table(class="table table-striped")
         thead
@@ -14,7 +16,7 @@ mixin table()
                 th(scope="col") Card Enabled
                 th(scope="col") Paid Dues
                 th(scope="col") Agreement
-                th(scope="col") Registration 
+                th(scope="col") Registration
                 th(scope="col") Watercraft 1
                 th(scope="col") MC 1 #
                 th(scope="col") Color 1
@@ -40,11 +42,11 @@ mixin table()
                         td= resident.On_Off_Water
                         td= resident.A_lot
                         td= resident.Area
-                        td= resident.Card_Number 
-                        td= resident.Card_Enabled 
-                        td= resident.Paid_Dues 
+                        td= resident.Card_Number
+                        td= resident.Card_Enabled
+                        td= resident.Paid_Due
                         td= resident.Agreement
-                        td= resident.Registration 
+                        td= resident.Registration
                         td= resident.Watercraft_1
                         td= resident.MC_1_Num
                         td= resident.Color_1
