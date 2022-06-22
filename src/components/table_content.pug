@@ -10,8 +10,9 @@ mixin table()
             tbody
                 each resident in data
                     tr
-                    - let i =0;
-                        td #{i++}
+                        //- -var i = 0;
+                        // TODO: Add unique ID
+                        td unique ID
                         td= resident.fName
                         td= resident.lName
                         td= resident.email
