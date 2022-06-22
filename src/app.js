@@ -12,7 +12,7 @@ var db = require("./config/db")
 
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
-var testRouter = require('../routes/test')
+var boatRampRouter = require('../routes/boat_ramp')
 
 var app = express();
 
@@ -30,8 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // TODO: add authentication
-// TODO: add filters
-app.use('/test', testRouter)
+app.use('/boat_ramp', boatRampRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
