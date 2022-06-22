@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 // requiring controller
-var db_controller = require("../src/controllers/db_controller")
+var index_controller = require("../src/controllers/index_controller")
 
 // routes
-router.get('/', db_controller.index)
+router.get('/', index_controller.index)
 
 module.exports = router;
