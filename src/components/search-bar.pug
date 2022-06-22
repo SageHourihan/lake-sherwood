@@ -1,2 +1,11 @@
 mixin search-bar()
+    script.
+        $(document).ready(function(){
+            $("#filter").on("keyup", function(){
+                var value = $(this).val().toLowerCase()
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
     <input class="form-control" type="text" id="filter" placeholder="Filter...">
