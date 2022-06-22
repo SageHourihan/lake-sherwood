@@ -4,12 +4,5 @@ include ../components/table_content
 include ../components/search-bar
 
 block content
-    script.
-        $(document).ready(function() {
-            $("#filter").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                console.log(val);
-            });
-        });
     +search-bar
     +table
