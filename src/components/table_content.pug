@@ -1,7 +1,7 @@
 //- TODO: resize tabel
 //- TODO: add search
 mixin table()
-    table(class="table table-striped" id="myTable")
+    table(class="table table-striped")
         thead
             tr(class='text-center')
                 th(scope="col") ID
@@ -31,7 +31,7 @@ mixin table()
                 th(scope="col") Watercraft 5
                 th(scope="col") MC 5 #
                 th(scope="col") Color 5
-            tbody
+            tbody(id="myTable")
                 each resident in data
                     tr(class='text-center')
                         td= resident.ID
