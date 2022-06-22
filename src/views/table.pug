@@ -4,5 +4,7 @@ include ../components/table_content
 include ../components/search-bar
 
 block content
-    +search-bar
-    +table
+    div(style="overflow: auto; width: 75%; transform: translateX(15%);")
+        +search-bar
+    div(style="overflow: auto; width: 75%; height: 35rem; transform: translateX(15%);")
+        +table
