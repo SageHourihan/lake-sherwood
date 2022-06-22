@@ -33,7 +33,7 @@ const config = {
   issuerBaseURL: 'https://dev-dzv70nbk.us.auth0.com'
 };
 
-// auth router attaches /login, /logout, and /callback routes to the baseURL
+// auth0 router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
 app.use((req, res, next) => {
