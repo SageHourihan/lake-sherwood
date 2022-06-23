@@ -4,15 +4,12 @@ mixin main-nav(activeRoute)
     nav(class="navbar navbar-expand-lg navbar-light  mb-5")
         div(class="container-fluid")
             a(class="navbar-brand" href="")
-            span(class="fas fa-hotel") LSA
+            div(class="navbar-nav ms-auto")
+                    a(class="nav-link" href="/" aria-current="page") Home
             button(class="navbar-toggler" type="butotn" ata-bs-toggle="collapse" data-bs-target="#navbar-bar"
                     aria-controls="navbar-bar" aria-expanded="false" aria-label="Toggle navigation")
                     span(class="avbar-toggler-icon")
             div(class="collapse navbar-collapse" id="navbar-bar")
                 div(class="navbar-nav ms-auto")
-                    a(class="nav-link" href="/" aria-current="page") Home
-                    a(class="nav-link" href="#") About
                     a(class="nav-link" href="/boat_ramp") Boat Ramp Database
-                    a(class="nav-link" href="#") Blog
-                    a(class="nav-link" href="#") Contact
                     +auth-nav(isAuthenticated)
