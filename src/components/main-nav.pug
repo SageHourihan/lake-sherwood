@@ -6,11 +6,11 @@ mixin main-nav(activeRoute)
             a(class="navbar-brand" href="")
             div(class="navbar-nav ms-auto")
                     a(class="nav-link" href="/" aria-current="page") Home
-            button(class="navbar-toggler" type="butotn" ata-bs-toggle="collapse" data-bs-target="#navbar-bar"
-                    aria-controls="navbar-bar" aria-expanded="false" aria-label="Toggle navigation")
-                    span(class="avbar-toggler-icon")
             div(class="collapse navbar-collapse" id="navbar-bar")
                 div(class="navbar-nav ms-auto")
-                    a(class="nav-link" href="/boat_ramp") Boat Ramp Database
+                    div(class="dropdown me-3")
+                        a(class="dropdown-toggle nav-link" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false") Databases
+                            ul(class="dropdown-menu" aria-labelledby="dropdownMenu2")
+                                li
+                                    button(class="dropdown-item" type="button" onclick="location.href='/boat_ramp'") Boat Ramp Database
                     +auth-nav(isAuthenticated)
-    
