@@ -1,11 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var residentController = require('../src/controllers/resident_controller')
+var boatRampController = require('../src/controllers/boatRamp_controller')
 
-/* GET test page. */
-// router.get('/', function (req, res, next) {
-//     res.render('table')
-// });
-router.get('/', residentController.fetchData)
+router.get('/', boatRampController.fetchData)
 
 module.exports = router;

@@ -1,7 +1,7 @@
-var residentModel = require('../models/residents')
+var boatRamp = require('../models/boat_ramp_model')
 module.exports = {
     fetchData: function (req, res) {
-        residentModel.fetchData(function (data) {
+        boatRamp.fetchData(function (data) {
             res.render('boat_ramp_table', { data: data })
             // console.log(data)
         })

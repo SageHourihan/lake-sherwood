@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var db = require("../config/db")
 
-var residentSchema = new Schema({
+var boatRampSchema = new Schema({
     ID: { type: String },
     Last_Name: { type: String },
     First_Name: { type: String },
@@ -34,12 +34,12 @@ var residentSchema = new Schema({
 }
 );
 
-residentTable = mongoose.model('residents', residentSchema)
+boatRampTable = mongoose.model('boatramps', boatRampSchema)
 
 module.exports = {
     fetchData: function (callback) {
-        var residentData = residentTable.find({})
-        residentData.exec(function (err, data) {
+        var boatRampData = boatRampTable.find({})
+        boatRampData.exec(function (err, data) {
             if (err) throw err
             return callback(data)
         })

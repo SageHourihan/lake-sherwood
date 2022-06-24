@@ -1,4 +1,3 @@
-//- TODO: resize table
 mixin table()
     table(class="table table-striped table-hover")
         thead
@@ -31,33 +30,33 @@ mixin table()
                 th(scope="col") MC 5 #
                 th(scope="col") Color 5
             tbody(id="myTable")
-                each resident in data
+                each boatRampData in data
                     tr(class='text-center')
-                        td= resident.ID
-                        td= resident.First_Name
-                        td= resident.Last_Name
-                        td= resident.House_Num
-                        td= resident.Street
-                        td= resident.On_Off_Water
-                        td= resident.A_lot
-                        td= resident.Area
-                        td= resident.Card_Number
-                        td= resident.Card_Enabled
-                        td= resident.Paid_Dues
-                        td= resident.Agreement
-                        td= resident.Registration
-                        td= resident.Watercraft_1
-                        td= resident.MC_1_Num
-                        td= resident.Color_1
-                        td= resident.Watercraft_2
-                        td= resident.MC_2_Num
-                        td= resident.Color_2
-                        td= resident.Watercraft_3
-                        td= resident.MC_3_Num
-                        td= resident.Color_3
-                        td= resident.Watercraft_4
-                        td= resident.MC_4_Num
-                        td= resident.Color_4
-                        td= resident.Watercraft_5
-                        td= resident.MC_5_Num
-                        td= resident.Color_5
+                        td= boatRampData.ID
+                        td= boatRampData.First_Name
+                        td= boatRampData.Last_Name
+                        td= boatRampData.House_Num
+                        td= boatRampData.Street
+                        td= boatRampData.On_Off_Water
+                        td= boatRampData.A_lot
+                        td= boatRampData.Area
+                        td= boatRampData.Card_Number
+                        td= boatRampData.Card_Enabled
+                        td= boatRampData.Paid_Dues
+                        td= boatRampData.Agreement
+                        td= boatRampData.Registration
+                        td= boatRampData.Watercraft_1
+                        td= boatRampData.MC_1_Num
+                        td= boatRampData.Color_1
+                        td= boatRampData.Watercraft_2
+                        td= boatRampData.MC_2_Num
+                        td= boatRampData.Color_2
+                        td= boatRampData.Watercraft_3
+                        td= boatRampData.MC_3_Num
+                        td= boatRampData.Color_3
+                        td= boatRampData.Watercraft_4
+                        td= boatRampData.MC_4_Num
+                        td= boatRampData.Color_4
+                        td= boatRampData.Watercraft_5
+                        td= boatRampData.MC_5_Num
+                        td= boatRampData.Color_5
