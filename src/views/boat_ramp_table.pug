@@ -2,9 +2,11 @@ extends ../components/layout
 
 include ../components/table_content
 include ../components/search-bar
+include ../components/crud-btns
 
 block content
     div(style="overflow: auto; width: 75%; transform: translateX(15%);")
+        +crud-btns
         +search-bar
     div(style="overflow: auto; width: 75%; height: 35rem; transform: translateX(15%); border: solid black 1px;")
         +table

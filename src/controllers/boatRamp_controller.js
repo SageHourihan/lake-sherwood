@@ -5,3 +5,11 @@ exports.fetchData = function (req, res) {
         res.render('boat_ramp_table', { data: data })
     })
 }
+
+exports.create = function (req, res) {
+    res.render('dev')
+}
+
+exports.editData = function (req, res) {
+    res.render('dev')
+}
