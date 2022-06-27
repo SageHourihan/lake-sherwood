@@ -36,12 +36,29 @@ var boatRampSchema = new Schema({
 
 boatRampTable = mongoose.model('boatramps', boatRampSchema)
 
-module.exports = {
-    fetchData: function (callback) {
-        var boatRampData = boatRampTable.find({})
-        boatRampData.exec(function (err, data) {
-            if (err) throw err
-            return callback(data)
-        })
-    }
+//mongoose query to fetch data
+exports.fetchData = function (callback) {
+    var boatRampData = boatRampTable.find({})
+    boatRampData.exec(function (err, data) {
+        if (err) throw err;
+        return callback(data);
+    })
+}
+
+// mongoose query to edit data
+exports.editData = function (editId, callback) {
+    var boatData = boatRampTable.findById(editId);
+    boatData.exec(function (err, data) {
+        if (err) throw err;
+        return callback(data);
+    })
+}
+
+exports.updateData = function (inputData, editId, callback) {
+
+    boatData = boatRampTable.findByIdAndUpdate(editId, inputData);
+    boatData.exec(function (err, data) {
+        if (err) throw err;
+        return callback(err);
+    })
 }

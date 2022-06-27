@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/boat_ramp', requiresAuth(), boatRampRouter)
+app.use('/boat_ramp', requiresAuth(), boatRampRouter);
 
 // login/logout
 app.get('/login/:page', (req, res) => {
