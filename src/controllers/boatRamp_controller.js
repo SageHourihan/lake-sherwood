@@ -7,7 +7,7 @@ exports.fetchData = function (req, res) {
 }
 
 exports.create = function (req, res) {
-    res.render('dev')
+    res.render('boatRamp_create')
 }
 
 exports.editData = function (req, res) {

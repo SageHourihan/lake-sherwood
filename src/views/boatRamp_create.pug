@@ -1,1 +1,69 @@
 //- TODO: work on form for creating
+extends ../components/layout
+block content
+    - let i = 412;
+    div(class="mb-3 row")
+    label(for="staticID" class="col-sm-2 col-form-label") ID
+    div(class="col-sm-10")
+      input(type="text" readonly class="form-control-plaintext" id="staticID" value=`${i}`)
+
+    div(class="mb-3 row")
+    label(for="First_Name" class="col-sm-2 col-form-label") First Name
+    div(class="col-sm-10")
+      input(type="text" class="form-control" id="First_Name")
+
+    div(class="mb-3 row")
+    label(for="Last_Name" class="col-sm-2 col-form-label") Last Name
+    div(class="col-sm-10")
+      input(type="text" class="form-control" id="Last_Name")
+
+    div(class="mb-3 row")
+    label(for="House_Num" class="col-sm-2 col-form-label") House Number
+    div(class="col-sm-10")
+      input(type="text" class="form-control" id="House_Num")
+
+    div(class="mb-3 row")
+    label(for="Street" class="col-sm-2 col-form-label") Street
+    div(class="col-sm-10")
+        select(class="form-select" aria-label="street name")
+            option(selected) Select Street
+            option(value="1") Barbwood
+            option(value="2") Beachwood
+            option(value="3") Bobbwood
+            option(value="4") Cherry Garden
+            option(value="5") Deerwood
+            option(value="6") Driftwood
+            option(value="7") E. Commerce
+            option(value="8") Gulfwood
+            option(value="9") Inverrary
+            option(value="10") Lakes Edge
+            option(value="11") Leafwood
+            option(value="12") Leafwood Ct
+            option(value="13") Ledgewood
+            option(value="14") Ledgewood E
+            option(value="15") Ledgewood W
+            option(value="16") Oakwood
+            option(value="17") Pikewood
+            option(value="18") Raftwood
+            option(value="19") Ravinewood
+            option(value="20") Ravinewood Ct
+            option(value="21") Sandbar
+            option(value="22") Sleeth
+            option(value="23") Starwood
+            option(value="24") Stumpwood
+            option(value="25") Surfwood
+            option(value="26") Tamwood
+            option(value="27") Tiquewood
+            option(value="28") Trentwood
+            option(value="29") Triwood
+            option(value="30") Wavewood
+            option(value="31") Windwood
+            option(value="32") Winewood
+
+    div(class="mb-3 row")
+    label(for="On_Off_Water" class="col-sm-2 col-form-label") On/Off Water
+    div(class="col-sm-10")
+        input(class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1")
+        label(class="form-check-label" for="inlineRadio1") On
+        input(class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2")
+        label(class="form-check-label" for="inlineRadio2") Off
