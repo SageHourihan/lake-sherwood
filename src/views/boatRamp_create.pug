@@ -1,7 +1,8 @@
 //- TODO: work on form for creating
 extends ../components/layout
 block content
-    - let i = 412;
+  - let i = 412;
+  form(class="ms-5 mb-5")
     div(class="mb-3 row")
     label(for="staticID" class="col-sm-2 col-form-label") ID
     div(class="col-sm-10")
@@ -63,7 +64,75 @@ block content
     div(class="mb-3 row")
     label(for="On_Off_Water" class="col-sm-2 col-form-label") On/Off Water
     div(class="col-sm-10")
-        input(class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1")
-        label(class="form-check-label" for="inlineRadio1") On
-        input(class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2")
-        label(class="form-check-label" for="inlineRadio2") Off
+        select(class="form-select" aria-label="On_Off_Water")
+            option(selected) Select On/Off
+            option(value="1") On
+            option(value="2") Off
+
+    div(class="mb-3 row")
+    label(for="A_lot" class="col-sm-2 col-form-label") A-Lot
+    div(class="col-sm-10")
+        select(class="form-select" aria-label="A_Lot")
+            option(selected) Select A-Lot
+            option(value="1") X
+            option(value="2") *
+
+    div(class="mb-3 row")
+    label(for="Area" class="col-sm-2 col-form-label") Area
+    div(class="col-sm-10")
+        select(class="form-select" aria-label="Area")
+            option(selected) Select Area
+            option(value="1") 1
+            option(value="2") 2
+            option(value="3") 3
+            option(value="4") 4
+            option(value="5") 5
+            option(value="6") 6
+            option(value="7") 7
+            option(value="8") 8
+            option(value="9") 9
+            option(value="10") 10
+            option(value="11") 11
+    div(class="mb-3 row")
+    label(for="Card_Number" class="col-sm-2 col-form-label") Card Number
+    div(class="col-sm-10")
+      input(type="text" class="form-control" id="Card_Number")
+
+    div(class="mb-3 row")
+    label(for="Card_Enabled" class="col-sm-2 col-form-label") Card Enabled
+    div(class="col-sm-10")
+      select(class="form-select" aria-label="Card_Enabled")
+            option(selected) Select Yes/No
+            option(value="1") Yes
+            option(value="2") No
+
+    div(class="mb-3 row")
+    label(for="Paid_Dues" class="col-sm-2 col-form-label") Paid Dues
+    div(class="col-sm-10")
+      select(class="form-select" aria-label="Paid_Dues" id="owes_select")
+        option(selected) Select Yes/No/Owes
+        option(value="1") Yes
+        option(value="2") No
+        option(value="3") Owes
+      input(type="text" class="form-control" id="owes")
+    script.
+      $("#owes").hide();
+      $(document).ready(function() {
+        let value = $("#owes_select").val();
+        //- alert(value);
+        if (value == 3) {
+          alert(value);
+        }
+      })
+      //- $(document).ready(function() {
+      //-   $("#owes_select").on("click", function() {
+      //-     //- $(this).hide();
+      //-     let value = $(this).val();
+      //-     if(value == 3) {
+      //-       //- alert(value);
+      //-       $("#owes").show();
+      //-     }else {
+      //-       $("owes").hide();
+      //-     }
+      //-   })
+      //- });
