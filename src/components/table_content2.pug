@@ -7,7 +7,7 @@ mixin table2()
                         div(class="col-sm-6")
                             h2 Manage 
                                 b Residents
-                                //TODO: decide if i want add/delete for certain roles on this page
+                                //-? // TODO: decide if i want add/delete for certain roles on this page
                         div(class="col-sm-6")
                             a(href="#addResidentModal" class="btn btn-success" data-toggle="modal")
                                 i(class="material-icons") &#xE147;
@@ -41,4 +41,24 @@ mixin table2()
                                         i(class="material-icons" data-toggle="tooltip" title="Edit") &#xE254;
                                     a(href="#deleteResidentModal" class="delete" data-toggle="modal")
                                         i(class="material-icons" data-toggle="tooltip" title="Delete") &#xE872;
-//TODO: Implement pagination in later versions.
+
+//-* // TODO: Implement pagination in later versions.
+
+// edit modal HTML
+div(id="addResidentModal" class="modal fade")
+    div(class="modal-dialog")
+        div(class="modal-content")
+            form
+                div(class="modal-header")
+                    h4(class="modal-title") Add Resident
+                    button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
+                div(class="modal-body")
+                    div(class="form-group")
+                        label Name
+                        input(type="text" class="form-control" required)
+                    div(class="form-group")
+                        label Address
+                        input(type="text" class="form-control" required)
+                div(class="modal-footer")
+                    input(type="button" class="btn btn-default" data-dismiss="modal" value="Cancel")
+                    input(type="submit" class="btn btn-success" value="Add")
