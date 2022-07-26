@@ -8,16 +8,16 @@ mixin table2()
                             h2 Manage 
                                 b Residents
                                 //TODO: decide if i want add/delete for certain roles on this page
-                        //- div(class="col-sm-6")
-                        //-     a(href="#addResidentModal" class="btn btn-success" data-toggle="modal")
-                        //-         i(class="material-icons") &#xE147;
-                        //-         span Add New Resident
-                        //-     a(href="#deleteResidentModal" class="btn btn-danger" data-toggle="modal")
-                        //-         i(class="material-icons") &#xE15c;
-                        //-         span Delete Resident
+                        div(class="col-sm-6")
+                            a(href="#addResidentModal" class="btn btn-success" data-toggle="modal")
+                                i(class="material-icons") &#xE147;
+                                span Add New Resident
+                            a(href="#deleteResidentModal" class="btn btn-danger" data-toggle="modal")
+                                i(class="material-icons") &#xE15c;
+                                span Delete Resident
                 table(class="table table-striped table-hover")
                     thead
-                        tr
+                        tr(class="text-center")
                             th
                                 span(class="custom-checkbox")
                                     input(type="checkbox" id="selectAll")
@@ -36,3 +36,8 @@ mixin table2()
                                 td= boatRampData.ID
                                 td= boatRampData.First_Name + " " + boatRampData.Last_Name
                                 td= boatRampData.House_Num + " " + boatRampData.Street
+                                td
+                                    a(href="#editResidentModal" class="edit" data-toggle="modal")
+                                        i(class="material-icons" data-toggle="tooltip" title="Edit") &#xE254;
+                                    a(href="#deleteResidentModal" class="delete" data-toggle="modal")
+                                        i(class="material-icons" data-toggle="tooltip" title="Delete") &#xE872;
