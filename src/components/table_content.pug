@@ -24,9 +24,6 @@ mixin table()
             });
         });
 
-
-
-
     div(class="container-xl")
         div(class="table-responsive")
             div(class="table-wrapper")
@@ -50,17 +47,17 @@ mixin table()
                                 span(class="custom-checkbox")
                                     input(type="checkbox" id="selectAll")
                                     label(for="selectAll")
-                                th ID
-                                th Name
-                                th Address
-                                th Action
+                            th ID
+                            th Name
+                            th Address
+                            th Action
                     tbody
                         each boatRampData in data
                             tr(class="text-center")
                                 td
                                     span(class="custom-checkbox")
-                                    input(type="checkbox" id="checkbox1" name="options[]" value="1")
-                                    label(for="checkbox1")
+                                        input(type="checkbox" id="checkbox1" name="options[]" value="1")
+                                        label(for="checkbox1")
                                 td= boatRampData.ID
                                 td= boatRampData.First_Name + " " + boatRampData.Last_Name
                                 td= boatRampData.House_Num + " " + boatRampData.Street
@@ -76,20 +73,26 @@ mixin table()
     div(id="addResidentModal" class="modal fade")
         div(class="modal-dialog")
             div(class="modal-content")
-                form
+                form(method='POST' action='')
                     div(class="modal-header")
                         h4(class="modal-title") Add Resident
                         button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
                     div(class="modal-body")
                         div(class="form-group")
-                            label Name
-                            input(type="text" class="form-control" required)
+                            label First Name
+                            input(type="text" class="form-control" required name="fName")
                         div(class="form-group")
-                            label Address
-                            input(type="text" class="form-control" required)
+                            label Last Name
+                            input(type="text" class="form-control" required name="lName")
+                        div(class="form-group")
+                            label House Number
+                            input(type="text" class="form-control" required name="hNum")
+                        div(class="form-group")
+                            label Street
+                            input(type="text" class="form-control" required name="street")
                     div(class="modal-footer")
                         input(type="button" class="btn btn-default" data-dismiss="modal" value="Cancel")
-                        input(type="submit" class="btn btn-success" value="Add")
+                        input(type="submit" class="btn btn-success")
     // Edit Modal HTML
     div(id="editResidentModal" class="modal fade")
         div(class="modal-dialog")

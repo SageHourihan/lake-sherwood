@@ -44,21 +44,3 @@ exports.fetchData = function (callback) {
         return callback(data);
     })
 }
-
-// mongoose query to edit data
-exports.editData = function (editId, callback) {
-    var boatData = boatRampTable.findById(editId);
-    boatData.exec(function (err, data) {
-        if (err) throw err;
-        return callback(data);
-    })
-}
-
-exports.updateData = function (inputData, editId, callback) {
-
-    boatData = boatRampTable.findByIdAndUpdate(editId, inputData);
-    boatData.exec(function (err, data) {
-        if (err) throw err;
-        return callback(err);
-    })
-}
