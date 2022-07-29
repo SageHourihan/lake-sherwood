@@ -21,6 +21,6 @@ exports.addData = function (req, res, next) {
     );
     resident.save(function (err) {
         if (err) { return next(err); }
-        res.render("index");
+        res.redirect("/boat_ramp")
     })
 }
