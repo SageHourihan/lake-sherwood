@@ -6,4 +6,6 @@ router.get('/', boatRampController.fetchData);
 
 router.post('/', boatRampController.addData);
 
+router.delete('/', boatRampController.deleteData);
+
 module.exports = router;

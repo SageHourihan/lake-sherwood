@@ -6,11 +6,7 @@ exports.fetchData = function (req, res) {
     })
 }
 
-exports.create = function (req, res) {
-    res.render('boatRamp_create')
-}
-
-exports.addData = function (req, res, next) {
+exports.addData = function (req, res) {
     var resident = new boatRampTable(
         {
             First_Name: req.body.fName,
@@ -23,4 +19,9 @@ exports.addData = function (req, res, next) {
         if (err) { return next(err); }
         res.redirect("/boat_ramp")
     })
+}
+
+exports.deleteData = function (req, res) {
+    console.log("Sage Hourihan wrote this. Delete test");
+    // console.log(req.body.fName);
 }
